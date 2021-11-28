@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root{
+    --c1: #131e2a;
+    --c2: #192532;
+    --c3: #2f4765;
+    --c4-1: #33A9FF;
+    --c4-2: #0090f8;
+    --c4-3: #0171c2;
+    --c5-1: #fac661;
+    --c5-2: #f1ae2d;
+    --c5-3: #E39907;
+    --c6-1: #35df90;
+    --c6-2: #1eb972;
+    --c6-3: #188e57;
+    --c7-1: #f47961;
+    --c7-2: #ea4f30;
+    --c7-3: #d62f0f;
+    --c8: #ffffff;
+    --c9: #5a718b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--c8);
+    font-family:'Nunito', 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: var(--c1);
+    text-align: center;
+    padding-top: 30px;
+}
+
+.container{
+    max-width: 500px;
+    padding: 20px 25px;
+    margin: 30px auto;
+    background-color: var(--c2);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.container > *{
+    width: 100%;
+}
+
+.container > *:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.container div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container div button{
+    background-color: var(--c5-1);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--c2);
+    cursor: pointer;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.container div button:hover{
+    background-color: var(--c5-2);
+}
+
+.container div button:active{
+    background-color: var(--c5-3);
+}
+
+form{
+    display: flex;
+}
+
+form input{
+    border: none;
+    outline: none;
+    background-color: var(--c3);
+    height: 35px;
+    font-size: 15px;
+    border: none;
+    padding: 0 10px;
+}
+
+form input[type="text"]{
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+
+form input[type="submit"]{
+    width: 20%;
+    background-color: var(--c4-1);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--c2);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+form input[type="submit"]:hover{
+    background-color: var(--c4-2);
+}
+
+form input[type="submit"]:active{
+    background-color: var(--c4-3);
+}
+
+input[type="checkbox"]{
+    position: relative;
+    left: 4px;
+    top: 2px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    min-height: 40px;
+    background-color: var(--c1);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    cursor: pointer;
+    line-height: 22px;
+}
+
+li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+li button{
+    background-color: var(--c7-1);
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 8px;
+    cursor: pointer;
+}
+
+li button:hover{
+    background-color: var(--c7-2);
+}
+
+li button:active{
+    background-color: var(--c7-3);
+}
+
+li.checked{
+    opacity: 0.4;
+    transform: scale(0.98);
+}
+
+li.checked span{
+    text-decoration: line-through;
+    text-decoration-color: var(--c5-1);
+    text-decoration-thickness: 2px;
+}
+
+li span{
+    user-select: none;
+}
+
+button{
+    user-select: none;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+   
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--c3);
+    border-radius: 8px;
+    background: -webkit-linear-gradient(30deg, rgba(65, 155, 251, 0.8) 0%, hsla(295, 94%, 76%, 0.8) 100%);
+}
